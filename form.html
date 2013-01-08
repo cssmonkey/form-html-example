@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Markup Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style type="text/css">
+  body {
+		color: #515151;
+		font-family: Arial, sans serif;
+		font-size: 62.5%;
+	}
+	fieldset {
+		border:none;
+		margin:0;
+	}
+	legend {
+		font-size:1.6em;
+		font-weight:bold;
+	}
+	label, input {
+		font-size:1.4em;
+	}
+	.field label {
+		display:block;
+	}
+	
+	.field,.checkboxField,.radiobuttonField {
+		padding:10px 0;
+	}
+	.checkboxField {
+	}
+	.radiobuttonField {
+	}
+</style>
+</head>
+<body>
+  <form>
+  <fieldset>
+  <legend>Form Description</legend>
+  <div class="field">
+  	<label>Text Label</label>
+  	<input type="text" placeholder="Placeholder text" autofocus>
+  </div>
+  <div class="field">
+  	<label>Email</label>
+  	<input type="email" placeholder="Enter a valid email address">
+  </div>
+  <div class="field">
+  	<label>Password</label>
+  	<input type="password">
+  </div>
+  <div class="field">
+  	<label>Telephone</label>
+  	<input type="tel">
+  </div>
+  <div class="checkboxField">
+  	<input type="checkbox">
+  	<label>Single Checkbox</label>
+  </div>
+  <div class="radiobuttonField">
+  	<input type="radio">
+  	<label>Single Radiobutton</label>
+  </div>
+  <fieldset class="dob">
+  	<legend>Date of Birth</legend>
+  	<div class="field">
+  		<label>Day</label>
+  		<input type="text" placeholder="DD">
+  	</div>
+  	<div class="field">
+  		<label>Month</label>
+  		<input type="text" placeholder="MM">
+  	</div>
+  	<div class="field">
+  		<label>Year</label>
+  		<input type="text" placeholder="YY">
+  	</div>
+  </fieldset>
+  <fieldset class="checkboxList">
+  	<legend>Checkbox list</legend>
+  	<div class="checkboxField">
+  		<input type="checkbox">
+  		<label>item 1</label>
+  	</div>
+  	<div class="checkboxField">
+  		<input type="checkbox">
+  		<label>item 2</label>
+  	</div>
+  	<div class="checkboxField">
+  		<input type="checkbox">
+  		<label>item 3</label>
+  	</div>
+  </fieldset>
+  <fieldset class="radiobuttonList">
+  	<legend>Radiobutton list</legend>
+  	<div class="radiobuttonField">
+  		<input type="radio">
+  		<label>item 1</label>
+  	</div>
+  	<div class="radiobuttonField">
+  		<input type="radio">
+  		<label>item 2</label>
+  	</div>
+  	<div class="radiobuttonField">
+  		<input type="radio">
+  		<label>item 3</label>
+  	</div>
+  </fieldset>
+  <div class="submit">
+  	<input type="submit" value="submit">
+  </div>
+  </fieldset>
+  </form>
+</body>
+</html>
