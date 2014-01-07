@@ -23,96 +23,114 @@
 	label, input {
 		font-size:1.4em;
 	}
-	.field label {
+	.field-row label {
 		display:block;
 	}
 	
-	.field,.checkboxField,.radiobuttonField {
+	.field-row,.checkbox-field-row,.radiobutton-field-row {
 		padding:10px 0;
 	}
-	.checkboxField {
+	.checkbox-field-row {
 	}
-	.radiobuttonField {
+	.radiobutton-field-row {
+	}
+	.error span {
+        color:red;
+        display: block;
+	    margin: 10px 0;
+        font-size:1.4em;
 	}
 </style>
 </head>
 <body>
-  <form>
-  <fieldset>
-  <legend>Form Description</legend>
-  <div class="field">
-  	<label>Text Label</label>
-  	<input type="text" placeholder="Placeholder text" autofocus>
-  </div>
-  <div class="field">
-  	<label>Email</label>
-  	<input type="email" placeholder="Enter a valid email address">
-  </div>
-  <div class="field">
-  	<label>Password</label>
-  	<input type="password">
-  </div>
-  <div class="field">
-  	<label>Telephone</label>
-  	<input type="tel">
-  </div>
-  <div class="checkboxField">
-  	<input type="checkbox">
-  	<label>Single Checkbox</label>
-  </div>
-  <div class="radiobuttonField">
-  	<input type="radio">
-  	<label>Single Radiobutton</label>
-  </div>
-  <fieldset class="dob">
-  	<legend>Date of Birth</legend>
-  	<div class="field">
-  		<label>Day</label>
-  		<input type="text" placeholder="DD">
-  	</div>
-  	<div class="field">
-  		<label>Month</label>
-  		<input type="text" placeholder="MM">
-  	</div>
-  	<div class="field">
-  		<label>Year</label>
-  		<input type="text" placeholder="YY">
-  	</div>
-  </fieldset>
-  <fieldset class="checkboxList">
-  	<legend>Checkbox list</legend>
-  	<div class="checkboxField">
-  		<input type="checkbox">
-  		<label>item 1</label>
-  	</div>
-  	<div class="checkboxField">
-  		<input type="checkbox">
-  		<label>item 2</label>
-  	</div>
-  	<div class="checkboxField">
-  		<input type="checkbox">
-  		<label>item 3</label>
-  	</div>
-  </fieldset>
-  <fieldset class="radiobuttonList">
-  	<legend>Radiobutton list</legend>
-  	<div class="radiobuttonField">
-  		<input type="radio">
-  		<label>item 1</label>
-  	</div>
-  	<div class="radiobuttonField">
-  		<input type="radio">
-  		<label>item 2</label>
-  	</div>
-  	<div class="radiobuttonField">
-  		<input type="radio">
-  		<label>item 3</label>
-  	</div>
-  </fieldset>
-  <div class="submit">
-  	<input type="submit" value="submit">
-  </div>
-  </fieldset>
+  <form role="form">
+   <fieldset>
+        <legend>Form Description</legend>
+        <div class="field-row">
+            <label for="textField">Text Label</label>
+            <input name="textField" id="textField" type="text" class="text-field" placeholder="Placeholder text" autofocus>
+        </div>
+        <div class="field-row">
+            <label for="emailField">Email</label>
+            <input name="emailField" id="emailField" type="email" class="text-field" aria-required="true" placeholder="Enter a valid email address">
+        </div>
+        <div class="field-row">
+            <label for="passwordField">Password</label>
+            <input name="passwordField" id="passwordField" class="text-field" type="password">
+        </div>
+        <div class="field-row">
+            <div class="error"><span>Error message example</span></div>
+            <label for="telephoneField">Telephone</label>
+            <input name="telephoneField" id="telephoneField" class="text-field" type="tel">
+        </div>
+        <div class="field-row">
+            <label for="numberField">Number</label>
+            <input name="numberField" id="numberField" class="text-field" type="number">
+        </div>
+        <div class="checkbox-field-row">
+            <input name="singleCheckboxField" id="singleCheckboxField" type="checkbox">
+            <label for="singleCheckboxField">Single Checkbox</label>
+        </div>
+        <div class="radiobutton-field-row">
+            <div class="error"><span>Error message example</span></div>
+            <input name="singleRadioButtonField" id="singleRadioButtonField" type="radio">
+            <label for="singleRadioButtonField">Single Radiobutton</label>
+        </div>
+        <fieldset class="dob">
+            <legend>Date of Birth</legend>
+            <div class="field-row">
+                <label for="dayField">Day</label>
+                <input name="dayField" id="dayField" class="text-field" type="text" placeholder="DD">
+            </div>
+            <div class="field-row">
+                <label for="monthField">Month</label>
+                <input name="monthField" id="monthField" class="text-field" type="text" placeholder="MM">
+            </div>
+            <div class="field-row">
+                <label for="yearField">Year</label>
+                <input name="yearField" id="yearField" class="text-field" type="text" placeholder="YY">
+            </div>
+        </fieldset>
+        <fieldset class="checkbox-list">
+            <legend>Checkbox list</legend>
+            <div class="checkbox-field-row">
+                <input id="checkboxField1" name="checkboxlist" type="checkbox">
+                <label for="checkboxField1">item 1</label>
+            </div>
+            <div class="checkbox-field-row">
+                <input id="checkboxField2" name="checkboxlist" type="checkbox">
+                <label for="checkboxField2">item 2</label>
+            </div>
+            <div class="checkbox-field-row">
+                <input id="checkboxField3" name="checkboxlist" type="checkbox">
+                <label for="checkboxField3">item 3</label>
+            </div>
+        </fieldset>
+        <fieldset class="radiobutton-list">
+            <legend>Radiobutton list</legend>
+            <div class="radiobutton-field-row">
+                <input id="radioButtonField1" name="radiobuttonlist" type="radio">
+                <label for="radioButtonField1">item 1</label>
+            </div>
+            <div class="radiobutton-field-row">
+                <input id="radioButtonField2" name="radiobuttonlist" type="radio">
+                <label for="radioButtonField2">item 2</label>
+            </div>
+            <div class="radiobutton-field-row">
+                <input id="radioButtonField3" name="radiobuttonlist" type="radio">
+                <label for="radioButtonField3">item 3</label>
+            </div>
+        </fieldset>
+        <div class="btn-container">
+            <div class="btn btn-icon-right">
+                <span class="btn-inner">
+                <span class="icon-arrow-ltr" aria-hidden="true"></span>
+                    <input type="button" value="Sign up">
+                </span>
+            </div>
+        </div>
+    </fieldset>
+
   </form>
 </body>
 </html>
